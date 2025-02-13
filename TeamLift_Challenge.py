@@ -10,8 +10,9 @@ class Handler:
 
     def search(self, search_query):
         out = []
+        search_query = search_query.lower()
         for x in self.skills:
-            if search_query in x:
+            if search_query in x.lower():
                 out.append(x)
         return out
 
